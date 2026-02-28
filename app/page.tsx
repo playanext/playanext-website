@@ -190,24 +190,53 @@ export default function Home() {
             <div className="relative mt-8 lg:mt-0">
               <div className="absolute inset-0 bg-linear-to-r from-emerald-500/20 to-cyan-500/20 blur-3xl" />
               <div className="relative bg-slate-900/90 backdrop-blur-xl border border-slate-800 rounded-2xl p-4 sm:p-6 shadow-2xl">
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="w-2 sm:w-3 h-2 sm:h-3 bg-red-500 rounded-full" />
-                  <div className="w-2 sm:w-3 h-2 sm:h-3 bg-yellow-500 rounded-full" />
-                  <div className="w-2 sm:w-3 h-2 sm:h-3 bg-green-500 rounded-full" />
-                  <span className="ml-auto text-xs text-slate-500 font-mono">
-                    partner-model.txt
-                  </span>
+                <div className="flex items-start justify-between gap-4 mb-5">
+                  <div>
+                    <div className="text-sm text-emerald-300 font-semibold">
+                      Built for long-term publisher partnerships
+                    </div>
+                    <div className="text-lg sm:text-xl text-white font-bold mt-1">
+                      What we provide
+                    </div>
+                  </div>
+                  <div className="shrink-0 w-10 h-10 rounded-xl bg-linear-to-br from-emerald-500/20 to-cyan-500/20 border border-slate-800 flex items-center justify-center">
+                    <svg
+                      className="w-5 h-5 text-emerald-300"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24">
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-                <pre className="text-xs sm:text-sm text-slate-300 font-mono leading-relaxed overflow-x-auto">
-                  <code>{`// PlayaNext: built for long-term publisher partnerships
 
-We provide:
-- Performance-driven user acquisition
-- Installation-based monetization
-- In-product revenue integrations
-- Global distribution partnerships
-- Transparent reporting & aligned incentives`}</code>
-                </pre>
+                <ul className="space-y-3 text-sm sm:text-base text-slate-300">
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1.5 w-2 h-2 rounded-full bg-emerald-400 shrink-0" />
+                    <span>Performance-driven user acquisition</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1.5 w-2 h-2 rounded-full bg-emerald-400 shrink-0" />
+                    <span>Installation-based monetization opportunities</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1.5 w-2 h-2 rounded-full bg-emerald-400 shrink-0" />
+                    <span>In-product revenue integrations</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1.5 w-2 h-2 rounded-full bg-emerald-400 shrink-0" />
+                    <span>Global distribution partnerships</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1.5 w-2 h-2 rounded-full bg-emerald-400 shrink-0" />
+                    <span>Transparent reporting and aligned incentives</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
