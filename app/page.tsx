@@ -15,7 +15,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Image
-              src="/Playanext-Icon.png"
+              src="/playanext_icon.png"
               alt="PlayaNext Icon"
               width={32}
               height={32}
@@ -158,7 +158,7 @@ export default function Home() {
                 </a>
               </div>
 
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-8">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
                 <div>
                   <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-1">
                     Global
@@ -168,7 +168,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div>
-                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-1">
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-1 truncate md:overflow-visible md:whitespace-normal">
                     Performance
                   </div>
                   <div className="text-xs sm:text-sm text-slate-400">
@@ -698,7 +698,7 @@ export default function Home() {
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <Image
-                  src="/playanext-logo.png"
+                  src="/playanext_icon.png"
                   alt="PlayaNext Logo"
                   width={32}
                   height={32}
