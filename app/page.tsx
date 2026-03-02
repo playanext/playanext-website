@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
 import { useMemo, useState } from "react";
 
@@ -767,13 +768,17 @@ export default function Home() {
               <h4 className="text-white font-semibold mb-4">Legal</h4>
               <ul className="space-y-2 text-sm text-slate-400">
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
+                  <a
+                    href="/privacy-policy"
+                    className="hover:text-white transition-colors">
                     Privacy Policy
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Terms of Service
+                  <a
+                    href="/terms-of-use"
+                    className="hover:text-white transition-colors">
+                    Terms of Use
                   </a>
                 </li>
               </ul>
