@@ -15,13 +15,14 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Image
-              src="/playanext_icon.png"
-              alt="PlayaNext Icon"
-              width={32}
-              height={32}
-              className="w-8 h-8 object-contain"
+              src="/playanext_logo.png"
+              alt="PlayaNext Logo"
+              width={220}
+              height={48}
+              className="h-10 w-auto sm:h-12 object-contain"
+              sizes="(max-width: 640px) 140px, 220px"
+              priority
             />
-            <span className="text-xl font-bold text-white">PlayaNext</span>
           </div>
 
           <div className="hidden md:flex items-center gap-6">
