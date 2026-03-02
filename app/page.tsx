@@ -558,10 +558,14 @@ export default function Home() {
               <div className="relative">
                 <div className="absolute inset-0 bg-linear-to-br from-emerald-500/20 to-cyan-500/20 blur-3xl" />
                 <div className="relative w-56 h-56 sm:w-72 sm:h-72 rounded-3xl bg-slate-900/60 border border-slate-800 backdrop-blur-xl flex items-center justify-center">
-                  <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl bg-linear-to-br from-emerald-400 to-cyan-500 flex items-center justify-center">
-                    <span className="text-slate-950 font-black text-3xl sm:text-4xl">
-                      IW
-                    </span>
+                  <div className="relative w-48 h-48 sm:w-60 sm:h-60 rounded-2xl overflow-hidden border border-slate-800">
+                    <Image
+                      src="/Ian_image.jpg"
+                      alt="Ian Weingarten"
+                      fill
+                      sizes="(max-width: 640px) 192px, 240px"
+                      className="object-cover"
+                    />
                   </div>
                 </div>
               </div>
