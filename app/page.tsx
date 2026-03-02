@@ -405,7 +405,7 @@ export default function Home() {
               </div>
               <div className="flex items-center justify-between gap-4 mb-2 sm:mb-3">
                 <h3 className="text-lg sm:text-xl font-semibold text-white">
-                  Extension Monetization
+                  Chrome Extension Monetization
                 </h3>
                 <a
                   href="https://playayield.com"
