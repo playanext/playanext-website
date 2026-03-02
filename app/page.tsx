@@ -158,7 +158,7 @@ export default function Home() {
                 </a>
               </div>
 
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
+              <div className="grid grid-cols-2 gap-4 sm:gap-6 mt-8 sm:mt-12">
                 <div>
                   <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-1">
                     Global
@@ -168,7 +168,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div>
-                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-1 truncate md:overflow-visible md:whitespace-normal">
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-1">
                     Performance
                   </div>
                   <div className="text-xs sm:text-sm text-slate-400">
