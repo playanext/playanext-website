@@ -321,7 +321,7 @@ export default function Home() {
                   Global reach
                 </div>
                 <div className="text-xs sm:text-sm text-slate-400">
-                  North America, LATAM, EMEA, and emerging markets.
+                  North America, EMEA, APAC, and Latin America.
                 </div>
               </div>
             </div>
@@ -492,8 +492,7 @@ export default function Home() {
                 Global Reach
               </h3>
               <p className="text-sm sm:text-base text-slate-400 leading-relaxed">
-                We operate across North America, LATAM, EMEA, and emerging
-                markets.
+                We operate across North America, EMEA, APAC, and Latin America.
               </p>
             </div>
             <div className="bg-slate-900/50 backdrop-blur-xl border border-slate-800 rounded-2xl p-6 sm:p-8">
@@ -537,10 +536,10 @@ export default function Home() {
                   to deliver sustainable outcomes for developers.
                 </p>
                 <p>
-                  PlayaNext operates across North America, Latin America, EMEA,
-                  and emerging markets, supporting partners seeking to expand
-                  internationally while maintaining platform integrity and user
-                  experience standards.
+                  PlayaNext operates across North America, EMEA, APAC, and Latin
+                  America, supporting partners seeking to expand internationally
+                  while maintaining platform integrity and user experience
+                  standards.
                 </p>
               </div>
             </div>
