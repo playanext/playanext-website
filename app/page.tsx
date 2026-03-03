@@ -143,8 +143,8 @@ export default function Home() {
               </h1>
 
               <p className="text-base sm:text-lg lg:text-xl text-slate-300 leading-relaxed mb-6 sm:mb-8">
-                We help software and extension developers acquire users and
-                increase revenues globally.
+                We help software and Chrome Extension developers acquire users
+                and increase revenues globally.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12">
@@ -227,7 +227,7 @@ export default function Home() {
                 <ul className="space-y-3 text-sm sm:text-base text-slate-300">
                   <li className="flex items-start gap-3">
                     <span className="mt-1.5 w-2 h-2 rounded-full bg-emerald-400 shrink-0" />
-                    <span>Performance-driven user acquisition</span>
+                    <span>In-product revenue integrations</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-1.5 w-2 h-2 rounded-full bg-emerald-400 shrink-0" />
@@ -235,8 +235,9 @@ export default function Home() {
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-1.5 w-2 h-2 rounded-full bg-emerald-400 shrink-0" />
-                    <span>In-product revenue integrations</span>
+                    <span>Performance-driven user acquisition</span>
                   </li>
+
                   <li className="flex items-start gap-3">
                     <span className="mt-1.5 w-2 h-2 rounded-full bg-emerald-400 shrink-0" />
                     <span>Global distribution partnerships</span>
@@ -367,15 +368,15 @@ export default function Home() {
               <div className="grid sm:grid-cols-2 gap-2 text-sm text-slate-300">
                 <div className="flex items-start gap-2">
                   <span className="text-emerald-400">•</span>
-                  <span>Performance-driven user acquisition</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-emerald-400">•</span>
-                  <span>Installation-based monetization opportunities</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-emerald-400">•</span>
                   <span>In-product revenue integrations</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="text-emerald-400">•</span>
+                  <span>Installation-based monetization</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="text-emerald-400">•</span>
+                  <span>Performance-driven user acquisition</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <span className="text-emerald-400">•</span>
@@ -383,7 +384,11 @@ export default function Home() {
                 </div>
                 <div className="flex items-start gap-2">
                   <span className="text-emerald-400">•</span>
-                  <span>Transparent reporting & aligned incentives</span>
+                  <span>Transparent reporting</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="text-emerald-400">•</span>
+                  <span>Aligned incentives</span>
                 </div>
               </div>
             </div>
@@ -417,9 +422,9 @@ export default function Home() {
               </div>
               <p className="text-sm sm:text-base text-slate-400 leading-relaxed mb-4 sm:mb-6">
                 For Chrome extension developers, PlayaNext offers a dedicated
-                monetization platform: PlayaYield. Built for Manifest V3
-                environments with a compliant, high-performance advertising
-                architecture.
+                monetization platform for integrating ads into your extension:
+                PlayaYield. Built for Manifest V3 environments with a compliant,
+                high-performance advertising architecture.
               </p>
               <div className="grid sm:grid-cols-2 gap-2 text-sm text-slate-300">
                 <div className="flex items-start gap-2">
