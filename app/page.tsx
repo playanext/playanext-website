@@ -498,7 +498,7 @@ export default function Home() {
             </div>
             <div className="bg-slate-900/50 backdrop-blur-xl border border-slate-800 rounded-2xl p-6 sm:p-8">
               <h3 className="text-lg sm:text-xl font-semibold text-white mb-2 sm:mb-3">
-                Built for Scalable Growth
+                Scalable Growth
               </h3>
               <p className="text-sm sm:text-base text-slate-400 leading-relaxed">
                 Distribution expertise, demand relationships, and technical
