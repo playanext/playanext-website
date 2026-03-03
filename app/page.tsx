@@ -422,7 +422,7 @@ export default function Home() {
                 </a>
               </div>
               <p className="text-sm sm:text-base text-slate-400 leading-relaxed mb-4 sm:mb-6">
-                For Chrome extension developers, PlayaNext offers a dedicated
+                For Chrome Extension developers, PlayaNext offers a dedicated
                 monetization platform for integrating ads into your extension:
                 PlayaYield. Built for Manifest V3 environments with a compliant,
                 high-performance advertising architecture.
