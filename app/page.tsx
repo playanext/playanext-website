@@ -372,23 +372,24 @@ export default function Home() {
                 </div>
                 <div className="flex items-start gap-2">
                   <span className="text-emerald-400">•</span>
+                  <span>Global distribution partnerships</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="text-emerald-400">•</span>
                   <span>Installation-based monetization</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="text-emerald-400">•</span>
+                  <span>Aligned incentives</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <span className="text-emerald-400">•</span>
                   <span>Performance-driven user acquisition</span>
                 </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-emerald-400">•</span>
-                  <span>Global distribution partnerships</span>
-                </div>
+
                 <div className="flex items-start gap-2">
                   <span className="text-emerald-400">•</span>
                   <span>Transparent reporting</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-emerald-400">•</span>
-                  <span>Aligned incentives</span>
                 </div>
               </div>
             </div>
