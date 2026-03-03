@@ -788,7 +788,7 @@ export default function Home() {
 
           <div className="pt-8 border-t border-slate-800/50 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-slate-400 text-sm">
-              © {year} PlayaNext. All rights reserved.
+              © {year} PlayaNext LLC. All rights reserved.
             </p>
             <div className="flex gap-4">
               <a
