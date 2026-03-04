@@ -14,7 +14,7 @@ export default function Home() {
     <div className="min-h-screen bg-linear-to-br from-slate-950 via-slate-900 to-slate-950">
       <nav className="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800/50">
         <div className="max-w-7xl mx-auto pl-0 pr-4 sm:pr-6 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center ml-4">
+          <Link href="/" className="flex items-center ml-2">
             <Image
               src="/playanext_logo.png"
               alt="PlayaNext Logo"
