@@ -14,7 +14,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "PlayaNext",
-  description: "Global distribution + monetization for software and extensions",
+  description:
+    "Global distribution + monetization for software and Chrome Extensions",
   icons: {
     icon: "/playanext_icon.png",
   },

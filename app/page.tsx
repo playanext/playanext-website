@@ -516,8 +516,8 @@ export default function Home() {
               </h2>
               <p className="text-base sm:text-lg text-slate-300 leading-relaxed mb-4">
                 PlayaNext is a global software distribution and monetization
-                platform serving desktop application publishers and browser
-                extension developers.
+                platform serving desktop application publishers and Chrome
+                Extension developers.
               </p>
               <p className="text-sm sm:text-base text-slate-400 leading-relaxed">
                 We partner with developers to build scalable user acquisition
@@ -715,8 +715,8 @@ export default function Home() {
                 />
               </div>
               <p className="text-slate-400 text-sm">
-                Global distribution and monetization for software and extension
-                developers.
+                Global distribution and monetization for software and Chrome
+                Extension developers.
               </p>
             </div>
             <div>
