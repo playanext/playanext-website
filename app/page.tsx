@@ -705,15 +705,14 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
             <div>
-              <div className="flex items-center gap-2 mb-4">
+              <div className="mb-4">
                 <Image
-                  src="/playanext_icon.png"
+                  src="/playanext_logo.png"
                   alt="PlayaNext Logo"
-                  width={32}
-                  height={32}
-                  className="w-8 h-8 object-contain"
+                  width={240}
+                  height={60}
+                  className="h-10 w-auto object-contain"
                 />
-                <span className="text-lg font-bold text-white">PlayaNext</span>
               </div>
               <p className="text-slate-400 text-sm">
                 Global distribution and monetization for software and extension
