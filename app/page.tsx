@@ -14,17 +14,16 @@ export default function Home() {
     <div className="min-h-screen bg-linear-to-br from-slate-950 via-slate-900 to-slate-950">
       <nav className="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800/50">
         <div className="max-w-7xl mx-auto pl-0 pr-4 sm:pr-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
+          <Link href="/" className="flex items-center ml-4">
             <Image
               src="/playanext_logo.png"
               alt="PlayaNext Logo"
-              width={220}
-              height={48}
-              className="h-10 w-auto sm:h-12 object-contain"
-              sizes="(max-width: 640px) 140px, 220px"
+              width={240}
+              height={60}
+              className="h-10 sm:h-14 w-auto object-contain"
               priority
             />
-          </div>
+          </Link>
 
           <div className="hidden md:flex items-center gap-6">
             <a
