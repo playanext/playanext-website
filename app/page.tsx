@@ -620,6 +620,15 @@ export default function Home() {
                 className="grid gap-4"
                 onSubmit={(e) => {
                   e.preventDefault();
+                  const formData = new FormData(e.currentTarget);
+                  const name = formData.get("name");
+                  const company = formData.get("company");
+                  const message = formData.get("message");
+
+                  const subject = `Contact from ${name}${company ? ` (${company})` : ""}`;
+                  const body = `${message}\n\n---\nName: ${name}\nCompany: ${company || "N/A"}`;
+
+                  window.location.href = `mailto:contact@playanext.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
                   setContactStatus("sent");
                 }}>
                 <div className="grid sm:grid-cols-2 gap-4">
@@ -636,27 +645,14 @@ export default function Home() {
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-slate-200 mb-2">
-                      Email
+                      Company (optional)
                     </label>
                     <input
-                      required
-                      type="email"
-                      name="email"
+                      name="company"
                       className="w-full rounded-xl bg-slate-950/60 border border-slate-800 px-4 py-3 text-slate-100 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
-                      placeholder="you@company.com"
+                      placeholder="Company name"
                     />
                   </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-slate-200 mb-2">
-                    Company (optional)
-                  </label>
-                  <input
-                    name="company"
-                    className="w-full rounded-xl bg-slate-950/60 border border-slate-800 px-4 py-3 text-slate-100 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
-                    placeholder="Company name"
-                  />
                 </div>
 
                 <div>
@@ -672,11 +668,11 @@ export default function Home() {
                   />
                 </div>
 
-                <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
+                <div className="flex flex-col sm:flex-row items-center justify-between gap-3 mt-2">
                   <button
                     type="submit"
                     className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-linear-to-r from-emerald-500 to-cyan-500 text-white rounded-xl font-semibold hover:shadow-xl hover:shadow-emerald-500/30 transition-all text-sm sm:text-base cursor-pointer">
-                    Send Message
+                    Open Email Client
                   </button>
 
                   <a
@@ -689,8 +685,15 @@ export default function Home() {
                 </div>
 
                 {contactStatus === "sent" && (
-                  <div className="text-sm text-emerald-300 bg-emerald-500/10 border border-emerald-500/20 rounded-xl px-4 py-3">
-                    Message queued. We’ll reach out shortly.
+                  <div className="text-sm text-emerald-300 bg-emerald-500/10 border border-emerald-500/20 rounded-xl px-4 py-3 mt-2">
+                    Email client opened. If nothing happened, you can email us
+                    directly at{" "}
+                    <a
+                      href="mailto:contact@playanext.com"
+                      className="underline hover:text-emerald-200">
+                      contact@playanext.com
+                    </a>
+                    .
                   </div>
                 )}
               </form>
