@@ -3,10 +3,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useMemo, useState } from "react";
+import { useForm, ValidationError } from "@formspree/react";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [contactStatus, setContactStatus] = useState<"idle" | "sent">("idle");
+  const [state, handleSubmit] = useForm("mlgodbrw");
 
   const year = useMemo(() => new Date().getFullYear(), []);
 
@@ -615,63 +616,99 @@ export default function Home() {
                 </p>
               </div>
 
-              <form
-                className="grid gap-4"
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  const formData = new FormData(e.currentTarget);
-                  const name = formData.get("name");
-                  const company = formData.get("company");
-                  const message = formData.get("message");
-
-                  const subject = `Contact from ${name}${company ? ` (${company})` : ""}`;
-                  const body = `${message}\n\n---\nName: ${name}\nCompany: ${company || "N/A"}`;
-
-                  window.location.href = `mailto:contact@playanext.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-                  setContactStatus("sent");
-                }}>
+              <form className="grid gap-4" onSubmit={handleSubmit}>
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-slate-200 mb-2">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium text-slate-200 mb-2">
                       Name
                     </label>
                     <input
                       required
+                      id="name"
                       name="name"
                       className="w-full rounded-xl bg-slate-950/60 border border-slate-800 px-4 py-3 text-slate-100 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
                       placeholder="Your name"
                     />
+                    <ValidationError
+                      prefix="Name"
+                      field="name"
+                      errors={state.errors}
+                      className="text-xs text-red-400 mt-1"
+                    />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-slate-200 mb-2">
-                      Company (optional)
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-slate-200 mb-2">
+                      Email Address
                     </label>
                     <input
-                      name="company"
+                      required
+                      id="email"
+                      type="email"
+                      name="email"
                       className="w-full rounded-xl bg-slate-950/60 border border-slate-800 px-4 py-3 text-slate-100 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
-                      placeholder="Company name"
+                      placeholder="Your email"
+                    />
+                    <ValidationError
+                      prefix="Email"
+                      field="email"
+                      errors={state.errors}
+                      className="text-xs text-red-400 mt-1"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-slate-200 mb-2">
+                  <label
+                    htmlFor="company"
+                    className="block text-sm font-medium text-slate-200 mb-2">
+                    Company (optional)
+                  </label>
+                  <input
+                    id="company"
+                    name="company"
+                    className="w-full rounded-xl bg-slate-950/60 border border-slate-800 px-4 py-3 text-slate-100 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
+                    placeholder="Company name"
+                  />
+                  <ValidationError
+                    prefix="Company"
+                    field="company"
+                    errors={state.errors}
+                    className="text-xs text-red-400 mt-1"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-slate-200 mb-2">
                     Message
                   </label>
                   <textarea
                     required
+                    id="message"
                     name="message"
                     rows={5}
                     className="w-full rounded-xl bg-slate-950/60 border border-slate-800 px-4 py-3 text-slate-100 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
                     placeholder="Tell us about your product and what you're looking to achieve..."
+                  />
+                  <ValidationError
+                    prefix="Message"
+                    field="message"
+                    errors={state.errors}
+                    className="text-xs text-red-400 mt-1"
                   />
                 </div>
 
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-3 mt-2">
                   <button
                     type="submit"
-                    className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-linear-to-r from-emerald-500 to-cyan-500 text-white rounded-xl font-semibold hover:shadow-xl hover:shadow-emerald-500/30 transition-all text-sm sm:text-base cursor-pointer">
-                    Open Email Client
+                    disabled={state.submitting}
+                    className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-linear-to-r from-emerald-500 to-cyan-500 text-white rounded-xl font-semibold hover:shadow-xl hover:shadow-emerald-500/30 transition-all text-sm sm:text-base cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed">
+                    {state.submitting ? "Sending..." : "Send Message"}
                   </button>
 
                   <a
@@ -683,18 +720,15 @@ export default function Home() {
                   </a>
                 </div>
 
-                {contactStatus === "sent" && (
+                {state.succeeded && (
                   <div className="text-sm text-emerald-300 bg-emerald-500/10 border border-emerald-500/20 rounded-xl px-4 py-3 mt-2">
-                    Email client opened. If nothing happened, you can email us
-                    directly at{" "}
-                    <a
-                      href="mailto:contact@playanext.com"
-                      className="underline hover:text-emerald-200">
-                      contact@playanext.com
-                    </a>
-                    .
+                    Thanks for your message! We'll get back to you soon.
                   </div>
                 )}
+                <ValidationError
+                  errors={state.errors}
+                  className="text-sm text-red-400 mt-2"
+                />
               </form>
             </div>
           </div>
